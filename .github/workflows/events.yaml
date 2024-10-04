@@ -7,7 +7,7 @@ on:
   push: # trigger 3
     branches: # filters
       - master
-    paths: # only work if there is change in the below folders
+    paths-ignore: # not work if there is change in the below path
       - '.github/workflows/*'
 jobs:
   deploy:
