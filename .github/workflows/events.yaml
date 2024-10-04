@@ -1,9 +1,13 @@
 name: Events
 on:
   pull_request: # trigger 1
-    types:
+    types: # activity types
       - opened
-  workflow_dispatch: # trigger 2
+  push: # trigger 2
+    branches: # filters
+      - master
+    paths: # only work if there is change in the below folders
+      - '.github/workflows/*'
 jobs:
   deploy:
     runs-on: ubuntu-latest
