@@ -1,5 +1,9 @@
-name: Events Demo 1
-on: ...
+name: Events
+on:
+  pull_request: # trigger 1
+    types:
+      - opened
+  workflow_dispatch: # trigger 2
 jobs:
   deploy:
     runs-on: ubuntu-latest
